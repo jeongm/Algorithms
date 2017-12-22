@@ -1,2 +1,2 @@
-# learn
-learn to code
+# Chinese
+for saving Chinese dialogues
