@@ -1,2 +1,2 @@
-# Chinese
-for saving Chinese dialogues
+# Algorithms
+Repository for many projects, but mostly for studying algorithm
