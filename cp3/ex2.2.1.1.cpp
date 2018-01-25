@@ -3,7 +3,7 @@
 
 using namespace std;
 int T, e; // T = number of elements
-int MAX = 100 * 10^3; // 1 <= N <= 100k
+int MAX = 100 * 1000; // 1 <= N <= 100k 
 int main() {
 #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
@@ -17,7 +17,7 @@ int main() {
         cin >> e;
         numbers.push_back(e);
     }
-    bool pairs[100*1000] = {false,};
+    bool pairs[100000] = {false,};
 
     for (auto &i:numbers) {
         if (pairs[i] == false) {
