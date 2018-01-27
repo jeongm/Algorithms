@@ -22,6 +22,7 @@ int main() {
         runs++;
         cout << "Case " << runs << ":\n";
         numbers.clear();
+        sums.clear();
 
         for (int i = 0; i < n; i++) {
             cin >> a;
