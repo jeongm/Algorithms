@@ -2,7 +2,12 @@
 #include "/Users/jeongminlim/stdc++.h"
 
 using namespace std;
-int n, m, a, testCase; // size of the set, size of query, element of set
+int T; // T <=10
+int D; // Size of database
+string M; // name of maker
+int L, H; // Lowest / Highest price
+int Q; // number of query
+int P; // query price
 
 int main() {
 #ifndef ONLINE_JUDGE
@@ -11,48 +16,44 @@ int main() {
     cin.tie(0);
     ios_base::sync_with_stdio(0);
     //code here
-    vector<int> numbers;
+    cin >> T;
 
-    vector<int> sums;
+    for (int i = 0; i < T; i++) {
+        cin >> D;
 
-    int runs = 0;
+        string makers[D];
+        int lowestPrice[D];
+        int highestPrice[D];
 
-    cin >> n;
-    while (n != 0) {
-        runs++;
-        cout << "Case " << runs << ":\n";
-        numbers.clear();
-        sums.clear();
-
-        for (int i = 0; i < n; i++) {
-            cin >> a;
-            numbers.push_back(a);
-        }
-        sort(numbers.begin(), numbers.end());
-
-        for (int i = 0; i < n - 1; i++) {
-            for (int j = i + 1; j < n; j++) {
-                sums.push_back(numbers[i] + numbers[j]);
-            }
+        for (int j = 0; j < D; j++) {
+            cin >> M >> L >> H;
+            makers[j] = M;
+            lowestPrice[j] = L;
+            highestPrice[j] = H;
         }
 
-        cin >> m;
-        for (int i = 0; i < m; i++) {
-            cin >> testCase;
-            int closestSum = 100000;
-            for (auto &sum:sums) {
-                if (abs(sum - testCase) < abs(closestSum - testCase)) { // difference: use abs
-                    closestSum = sum;
+
+        cin >> Q;
+        for (int j = 0; j < Q; j++) {
+            cin >> P;
+            int matches = 0;
+            int matchIndex = 0;
+            for (int k = 0; k < D; k++) {
+                if (lowestPrice[k] <= P && highestPrice[k] >= P) {
+                    matches++;
+                    matchIndex = k;
                 }
             }
-            cout << "Closest sum to " << testCase << " is " << closestSum << ".\n";
-
+            if (matches == 1) {
+                cout << makers[matchIndex] << '\n';
+            } else {
+                cout << "UNDETERMINED\n";
+            }
         }
-
-
-        cin >> n;
+        if (i != T - 1) {
+            cout << '\n';
+        }
     }
-
 
     return 0;
 }
