@@ -4,7 +4,7 @@
 using namespace std;
 
 
-int row[8], a = 0, b = -1, lineCounter, T;
+int row[8], lineCounter, T;
 int all[92][8], testcase[8];
 int runs;
 
@@ -21,10 +21,7 @@ bool place(int r, int c) {
 // driver function that recursively puts queens in valid position and stores them to 2D array
 void backtrack(int c) {
     // base case. c == 8 : all 8 queens were placed in valid position.
-    // row[b] == a :  I do not know how to run the function until I get all the cases.
-    // This particular case a = 0 and b = -1 worked, so I used this case.
-
-    if (c == 8 && row[b] == a) {
+    if (c == 8) {
         lineCounter++;
         all[lineCounter - 1][0] = row[0] + 1;
         for (int j = 1; j < 8; j++) {
