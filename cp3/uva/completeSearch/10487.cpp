@@ -39,7 +39,7 @@ int main() {
         cin >> m;
         for (int i = 0; i < m; i++) {
             cin >> testCase;
-            int closestSum = 100000;
+            int closestSum = 2^32LL - 1;
             for (auto &sum:sums) {
                 if (abs(sum - testCase) < abs(closestSum - testCase)) { // difference: use abs
                     closestSum = sum;
