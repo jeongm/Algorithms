@@ -1,3 +1,4 @@
+
 // Jeong-Min Lim (limjeongmin@wustl.edu)
 
 #include <bits/stdc++.h>
@@ -26,6 +27,7 @@ void dfs(int node, vector<int> board[10010]) {
     st.push(node); // Put code here to insert into stack when DFS is over.
 
 }
+
 
 
 void kosaraju(int node, vector<int> board[10010]) {
