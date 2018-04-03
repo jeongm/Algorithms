@@ -1,2 +1,2 @@
 # Algorithms
-Repository for many projects, but mostly for studying algorithm
+Notes and codes
