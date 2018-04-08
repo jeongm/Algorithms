@@ -37,15 +37,15 @@ int main() {
 
         for (int i = 0; i < e; i++) {
             cin >> a >> b;
-//            if (first) {
-//                s = a;      // This did not work for baekjoon test cases. 
-//                first = false;
-//            }
+            if (first) {
+                s = a;
+                first = false;
+            }
             graph[a].push_back(b);
         }
 
-        q.push(a);
-        color[a] = 0;
+        q.push(s);
+        color[s] = 0;
         isBipartite = true;
 
         while (!q.empty() && isBipartite) {
