@@ -1,13 +1,12 @@
 import webbrowser
 
-header = """<!DOCTYPE html>
-<html>
-<body>
-<div align="center">
-"""
-closure = """</div>
-</body>
-</html>"""
+html_header = """<!DOCTYPE html>
+            <html>
+            <body>
+            <div align="center">"""
+html_closure = """</div>
+             </body>
+             </html>"""
 
 link = 'https://boj.kr/'
 raw = 'recommended_problems_to_solve'
@@ -20,7 +19,7 @@ solved = list(my.split())
 
 v = open('problems_to_solve.html', 'w')
 
-v.write(header)
+v.write(html_header)
 
 cnt = 0
 total = len(problems)
@@ -30,7 +29,7 @@ for problem in problems:
         new_url = link + problem
         v.write('<a href="' + new_url + '" target="_blank">' + new_url + '</a><br><br>')
 
-v.write(closure)
+v.write(html_closure)
 
 v.close()
 
