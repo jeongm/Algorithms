@@ -1,19 +1,39 @@
-link = 'https://boj.kr/'
+import webbrowser
 
-raw = 'some_recommendation'
+header = """<!DOCTYPE html>
+<html>
+<body>
+<div align="center">
+"""
+closure = """</div>
+</body>
+</html>"""
+
+link = 'https://boj.kr/'
+raw = 'recommended_problems_to_solve'
+
+my = 'my_solved_problems_list'
+
 problems = list(raw.split(', '))
 
-my = 'some_solved'
 solved = list(my.split())
 
-v = open('problems_to_solve.txt', 'w')
+v = open('problems_to_solve.html', 'w')
+
+v.write(header)
+
 cnt = 0
 total = len(problems)
 for problem in problems:
     if problem not in solved:
         cnt += 1
-        v.write(link + problem + '\n')
+        new_url = link + problem
+        v.write('<a href="' + new_url + '" target="_blank">' + new_url + '</a><br><br>')
+
+v.write(closure)
 
 v.close()
 
 print(str(cnt) + ' problem links out of ' + str(total) + ' recommendations generated!')
+
+webbrowser.open_new_tab('problems_to_solve.html')
