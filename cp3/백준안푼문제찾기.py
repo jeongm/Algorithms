@@ -1,4 +1,4 @@
-link = 'https://www.acmicpc.net/problem/'
+link = 'https://boj.kr/'
 raw = ''
 my = ''
 problems = list(raw.split(', '))
