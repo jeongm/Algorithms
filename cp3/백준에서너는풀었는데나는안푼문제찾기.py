@@ -9,11 +9,11 @@ html_closure = """</div>
              </html>"""
 
 link = 'https://boj.kr/'
-raw = 'recommended_problems_to_solve'
+raw = 'recommended_problems_to_solve' # 상대방의 푼 문제
 
-my = 'my_solved_problems_list'
+my = 'my_solved_problems_list' # 나의 푼 문제
 
-problems = list(raw.split(', '))
+problems = list(raw.split())
 
 solved = list(my.split())
 
