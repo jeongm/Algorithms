@@ -1,3 +1,6 @@
+# https://www.acmicpc.net/problem/1759
+# Huh Python3 code
+
 import string
 
 ans = set()
