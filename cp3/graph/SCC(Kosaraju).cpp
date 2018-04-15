@@ -1,5 +1,5 @@
-
 // Jeong-Min Lim (limjeongmin@wustl.edu)
+// https://www.acmicpc.net/problem/2150
 
 #include <bits/stdc++.h>
 
