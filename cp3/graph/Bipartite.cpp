@@ -1,4 +1,5 @@
 // Jeong-Min Lim (limjeongmin@wustl.edu)
+// https://www.acmicpc.net/problem/1707
 
 #include <bits/stdc++.h>
 
@@ -37,15 +38,15 @@ int main() {
 
         for (int i = 0; i < e; i++) {
             cin >> a >> b;
-            if (first) {
-                s = a;
-                first = false;
-            }
+//            if (first) {
+//                s = a;      // This did not work for baekjoon test cases. 
+//                first = false;
+//            }
             graph[a].push_back(b);
         }
 
-        q.push(s);
-        color[s] = 0;
+        q.push(a);
+        color[a] = 0;
         isBipartite = true;
 
         while (!q.empty() && isBipartite) {
@@ -74,7 +75,6 @@ int main() {
 
     return 0;
 }
-
 
 
 
