@@ -1,5 +1,6 @@
 // Jeong-Min Lim (limjeongmin@wustl.edu)
-
+// UVA 00247 - Calling Circles (https://uva.onlinejudge.org/external/2/247.pdf)
+// String implicit graph input
 #include <bits/stdc++.h>
 
 using namespace std;
