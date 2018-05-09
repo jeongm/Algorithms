@@ -1,2 +1,2 @@
-# Chinese cheat-sheet 
-Phrases I need to know when visiting China
+# Chinese Cheat-Sheet 
+Phrases I am likely to use when I visit China.
