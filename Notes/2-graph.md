@@ -70,3 +70,6 @@
       - Note that we want `priority_queue` to return smallest values. 
    - Weighted with potential negative weight cycle : Bellman Ford
       - Safe but slower than Djikstra's with `priority_queue`	
+      
+# Graph Common mistakes
+- Do not initialize graph vector with `graph.clear()`
