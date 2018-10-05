@@ -1,3 +1,5 @@
+# Interview Question Practice covered in CSE247R of Washington University
+
 # How to tackle problems
 - Ask clarifying questions
 - start from brute force solution, ant then improve
