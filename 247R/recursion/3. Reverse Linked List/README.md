@@ -11,9 +11,9 @@ public Node reverseLL(Node reverseHead, Node originalHead)
         return reverseHead 
     else
         Node temp = originalHead.next
-        originalHead.next = reverseHead // head of the original Linked List now points to the head of the reversed Linked List
-        reverseHead = originalHead // head of the reverse Linked List is now the head of the original Linked List
-        originalHead = temp // head of the original Linked List is the next node of the head of original Linked List 
+        originalHead.next = reverseHead // head of the oLL now points to the head of the rLL
+        reverseHead = originalHead // head of the rLL is now the head of the oLL
+        originalHead = temp // head of the oLL is the next node of the head of oLL 
         reverseLL(reverseHead, originalHead)
 ```
 
