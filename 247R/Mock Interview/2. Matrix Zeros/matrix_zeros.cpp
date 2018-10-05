@@ -17,7 +17,7 @@ int main() {
     //code here
     memset(matrix, -1, sizeof(a));
 
-    cin >> m>> n;
+    cin >> m >> n;
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
             cin >> a;
@@ -33,18 +33,17 @@ int main() {
     cout << "----------------\n";
 
 
-
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
             if (matrix[i][j] == -1) {
                 for (int p = 0; p < n; p++) {
-                    if(matrix[i][p] == -1){
+                    if (matrix[i][p] == -1) {
                         continue;
                     }
                     matrix[i][p] = -2;
                 }
                 for (int q = 0; q < m; q++) {
-                    if(matrix[q][j] == -1){
+                    if (matrix[q][j] == -1) {
                         continue;
                     }
                     matrix[q][j] = -2;
@@ -55,7 +54,7 @@ int main() {
 
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
-            if (matrix[i][j] == -2 || matrix[i][j] == -1 ) {
+            if (matrix[i][j] < 0) {
                 cout << 0 << ' ';
             } else {
                 cout << matrix[i][j] << ' ';
